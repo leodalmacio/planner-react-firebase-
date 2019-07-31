@@ -6,6 +6,7 @@ exports.getAllScreams = (req, res) => {
         .orderBy('createdAt', 'desc')
         .get()
         .then((data) => {
+            
             let screams = [];
             data.forEach((doc) => {
                 screams.push({
